@@ -1,0 +1,42 @@
+class Machine
+{
+    void start()
+    {
+        System.out.println("Machine is starting");
+    }
+}
+
+interface Printable
+{
+    void print();
+}
+
+interface Scannable
+{
+    void scan();
+}
+
+class Printer extends Machine implements Printable, Scannable
+{
+    public void print()
+    {
+        System.out.println("Printing document");
+    }
+
+    public void scan()
+    {
+        System.out.println("Scanning document");
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Printer p = new Printer();
+
+        p.start();
+        p.print();
+        p.scan();
+    }
+}
